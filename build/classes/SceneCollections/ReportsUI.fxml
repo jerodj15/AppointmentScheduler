@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneCollections.ReportsUIController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="110.0" prefHeight="529.0" prefWidth="830.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="myScheduleTab" text="My Schedule for The Week">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="scheduleTable" layoutX="14.0" layoutY="58.0" prefHeight="430.0" prefWidth="810.0" />
+                        <Button fx:id="allApptButton" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="View All My Appointments" onAction="#viewAllAppts"/>
+                        <Button fx:id="weekApptButton" layoutX="194.0" layoutY="23.0" mnemonicParsing="false" text="My Schedule for the Week" onAction="#weekSchedulePressed"/>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab fx:id="numApptTypesMonth" text="Number of Appointment Types By Month">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <PieChart fx:id="numApptsPie" layoutX="189.0" layoutY="15.0" prefHeight="470.0" prefWidth="635.0" title="Number of Appointment Types" />
+                        <Button fx:id="resultsButton" layoutX="68.0" layoutY="136.0" mnemonicParsing="false" onAction="#resultsButtonPressed" text="Display Results" />
+                        <ComboBox fx:id="yearCombo" layoutX="14.0" layoutY="46.0" prefWidth="150.0" promptText="Pick the Year" />
+                        <ComboBox fx:id="monthCombo" layoutX="14.0" layoutY="90.0" prefWidth="150.0" promptText="Pick the month" />
+                        <ListView fx:id="typeListView" layoutY="195.0" prefHeight="298.0" prefWidth="180.0" />
+                        <Label layoutX="60.0" layoutY="178.0" text="Breakdown" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="avgApptTimesConsultant" text="Average Appointment Times per Consultant">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BarChart fx:id="avgApptTimesBarChart" layoutX="14.0" layoutY="69.0" prefHeight="427.0" prefWidth="814.0">
+                          <xAxis>
+                            <CategoryAxis label="User By ID" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Average Time in Minutes" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <ComboBox fx:id="yearComboAVG" layoutX="265.0" layoutY="37.0" prefWidth="150.0" />
+                        <ComboBox fx:id="monthComboAVG" layoutX="442.0" layoutY="37.0" prefWidth="150.0" />
+                        <Label layoutX="326.0" layoutY="14.0" text="Year" />
+                        <Label layoutX="503.0" layoutY="14.0" text="Month" />
+                        <Button fx:id="goButton" layoutX="617.0" layoutY="37.0" mnemonicParsing="false" onAction="#goButtonPressed" text="Go" />
+                        <Button fx:id="clearButton" layoutX="764.0" layoutY="37.0" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

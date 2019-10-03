@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneCollections.CreateNewAppointmentUIController">
+   <children>
+      <Label layoutX="19.0" layoutY="35.79999923706055" text="Appointment Details">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="19.0" layoutY="77.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Last Update :" GridPane.rowIndex="12" />
+            <Label text="Customer Name :" />
+            <Label prefHeight="18.0" prefWidth="127.0" text="User Appointment :" GridPane.rowIndex="1" />
+            <Label prefHeight="28.0" prefWidth="92.0" text="Title :" GridPane.rowIndex="2" />
+            <Label prefHeight="28.0" prefWidth="92.0" text="Description :" GridPane.rowIndex="3" />
+            <Label prefHeight="28.0" prefWidth="92.0" text="Location :" GridPane.rowIndex="4" />
+            <Label prefHeight="28.0" prefWidth="92.0" text="Contact" GridPane.rowIndex="5" />
+            <Label prefHeight="28.0" prefWidth="92.0" text="Type :" GridPane.rowIndex="6" />
+            <Label prefHeight="28.0" prefWidth="92.0" text="URL :" GridPane.rowIndex="7" />
+            <Label prefHeight="28.0" prefWidth="152.0" text="Start :" GridPane.rowIndex="8" />
+            <Label prefHeight="28.0" prefWidth="152.0" text="End :" GridPane.rowIndex="9" />
+            <Label prefHeight="28.0" prefWidth="152.0" text="Creation Date :" GridPane.rowIndex="10" />
+            <Label prefHeight="28.0" prefWidth="121.0" text="Created By :" GridPane.rowIndex="11" />
+            <TextField fx:id="titleTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="descriptionTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="locationTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="contactTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="typeTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="urlTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="createDateTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="createByTF" editable="false" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <TextField fx:id="lastUpTF" editable="false" layoutX="162.0" layoutY="315.0" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label text="Last Updated By :" GridPane.rowIndex="13" />
+            <TextField fx:id="lastUpByTF" editable="false" layoutX="162.0" layoutY="344.0" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <ComboBox fx:id="custNameCombo" prefHeight="26.0" prefWidth="233.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="userNameCombo" prefHeight="26.0" prefWidth="233.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="startTF" promptText="YYYY-MM-DD HH:MM" />
+                  <ComboBox fx:id="startAMPM" prefWidth="150.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="endTF" onMouseClicked="#autoInsertDate" promptText="YYYY-MM-DD HH:MM" />
+                  <ComboBox fx:id="endAMPM" prefWidth="150.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <Button fx:id="cancelButton" layoutX="353.0" layoutY="479.0" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel" />
+      <Button fx:id="saveButton" layoutX="300.0" layoutY="479.0" mnemonicParsing="false" onAction="#saveButtonPressed" text="Save" />
+   </children>
+</Pane>
